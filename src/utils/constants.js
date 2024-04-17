@@ -5,7 +5,6 @@ export const NetFlix_Logo =
 export const Netflix_Avatar =
   "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp";
 
-export const TMDB_APILINK = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
 export const TMDB_API = {
     method: 'GET',
     headers: {
@@ -13,3 +12,10 @@ export const TMDB_API = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YTk2MWM2OGViYTc1MmFlZjFkOGY0Y2Y3NmZjY2Y0ZCIsInN1YiI6IjY2MWZhOWMzMWNmZTNhMDE2NDliNmU2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q4BONBYHreDmTZKsZr81ESfpzydhJLvcIPBuGptEm6E'
     }
   };
+
+export const MovieImg ="https://image.tmdb.org/t/p/w500";
+
+export const TMDB_APILINK_Playing = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+export const TMDB_APILINK_Popular = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+export const TMDB_APILINK_TopRated = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+export const TMDB_APILINK_UpComing = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
