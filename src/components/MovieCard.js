@@ -40,7 +40,7 @@ const MovieCard = ({ dt }) => {
         <div>Rating: {vote_average.toFixed(1)}</div>
       </div> */}
       <img
-        className="hover:hidden"
+        className=""
         src={MovieImg + poster_path}
         alt="MovieCard"
       />
