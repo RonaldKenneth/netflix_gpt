@@ -75,15 +75,20 @@ function Login() {
   };
   return (
     <div>
-      <div className="absolute">
-        <img className="brightness-50	" src={NetFlix_BG} alt="NetFlix_BG" />
-      </div>
       <Header />
+      <div className="absolute">
+        <img
+          className="h-auto object-cover"
+          src={NetFlix_BG}
+          alt="NetFlix_BG"
+        />
+      </div>
+
       <form
         onClick={(e) => e.preventDefault()}
-        className="absolute w-3/12 p-12 right-0 left-0 mx-auto bg-black bg-opacity-70 my-24  text-white"
+        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
       >
-        <h1 className="py-4 font-bold text-3xl">
+        <h1 className="font-bold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
@@ -91,49 +96,35 @@ function Login() {
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="my-4 p-2 w-full bg-white bg-opacity-10 border border-solid border-gray-400 rounded-sm"
+            className="p-4 my-4 w-full bg-gray-700"
           />
         )}
         <input
           ref={isEmail}
           type="text"
           placeholder="Email Address"
-          className="my-4 p-2 w-full bg-white bg-opacity-10 border border-solid border-gray-400 rounded-sm"
+          className="p-4 my-4 w-full bg-gray-700"
         />
         <input
           ref={isPwd}
           type="password"
           placeholder="Password"
-          className="my-4 p-2 w-full bg-white bg-opacity-10 border border-solid border-gray-400 rounded-sm"
+          className="p-4 my-4 w-full bg-gray-700"
         />
-        <p className="p-0.5 text-red-600">{errMsg}</p>
+
+        <p className="text-red-500 font-bold text-lg py-2">{errMsg}</p>
         <button
-          className="my-4 p-1 w-full bg-red-600 rounded-sm"
+          className="p-4 my-6 bg-red-700 w-full rounded-lg"
           onClick={HndleValidatn}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        {isSignInForm ? (
-          <p className="text-gray-400">
-            New to Netflix?{" "}
-            <span
-              className=" cursor-pointer text-white hover:underline"
-              onClick={handleSignUp}
-            >
-              Sign up now.
-            </span>
-          </p>
-        ) : (
-          <p className="text-gray-400">
-            Already a User?{" "}
-            <span
-              className=" cursor-pointer text-white hover:underline"
-              onClick={handleSignUp}
-            >
-              Sign In now.
-            </span>
-          </p>
-        )}
+
+        <p className="py-4 cursor-pointer">
+          {isSignInForm
+            ? "New to Netflix? Sign up now."
+            : "Already a User? Sign In now."}
+        </p>
       </form>
     </div>
   );

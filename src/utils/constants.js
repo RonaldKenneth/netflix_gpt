@@ -9,7 +9,7 @@ export const TMDB_API = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YTk2MWM2OGViYTc1MmFlZjFkOGY0Y2Y3NmZjY2Y0ZCIsInN1YiI6IjY2MWZhOWMzMWNmZTNhMDE2NDliNmU2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q4BONBYHreDmTZKsZr81ESfpzydhJLvcIPBuGptEm6E'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5YTk2MWM2OGViYTc1MmFlZjFkOGY0Y2Y3NmZjY2Y0ZCIsInN1YiI6IjY2MWZhOWMzMWNmZTNhMDE2NDliNmU2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Q4BONBYHreDmTZKsZr81ESfpzydhJLvcIPBuGptEm6E',
     }
   };
 
@@ -19,3 +19,9 @@ export const TMDB_APILINK_Playing = "https://api.themoviedb.org/3/movie/now_play
 export const TMDB_APILINK_Popular = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
 export const TMDB_APILINK_TopRated = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
 export const TMDB_APILINK_UpComing = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1";
+
+export const Supported_Language =[{identifier:"en",name:"English"},{identifier:"tamil",name:"Tamil"},{identifier:"spanish",name:"Spanish"}];
+
+
+
+export const searchMovieTMDBapi ={api1:"https://api.themoviedb.org/3/search/movie?query=",api2: "&include_adult=false&language=en-US&page=1"}
